@@ -1,0 +1,24 @@
+<div style="max-width: 35vw; max-height: 50vw!important; margin: auto; margin-top: 13vw; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-radius: 8px; overflow: hidden;">
+
+  <h2 style="background-color: white; padding: 15px; text-align: center; color: rgb(118, 118, 173); border-bottom: 1px solid rgb(118, 118, 173); font-size: 1.8vw;">Login</h2>
+
+  <div style="background-color: white; padding: 20px;">
+
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+
+      <div style="margin-bottom: 15px;">
+        <label for="email" style="display: block; margin-bottom: 1vw; font-weight: bold; color: rgb(81, 81, 137)">Email:</label>
+        <input type="email" class="form-control" formControlName="email" style="width: 95%; padding: 8px; border: 1px solid #bdc3c7; border-radius: 4px;">
+      </div>
+
+      <div style="margin-bottom: 15px;">
+        <label for="password" style="display: block; margin-bottom: 1vw; font-weight: bold; color: rgb(81, 81, 137)">Password:</label>
+        <input type="password" class="form-control" formControlName="passwordHash" style="width: 95%; padding: 8px; border: 1px solid #bdc3c7; border-radius: 4px;">
+      </div>
+
+      <button type="submit" class="btn btn-primary" style="margin-top: 1vw; width: 30%; background-color: rgb(118, 118, 173); color: white; padding: 10px; border: none; border-radius: 4px; cursor: pointer; font-weight: bold;">Login</button>
+
+    </form>
+
+  </div>
+</div>

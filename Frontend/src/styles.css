@@ -1,0 +1,46 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5vw;
+  }
+  
+  /* Style the table header */
+  thead {
+    background-color: rgb(118, 118, 173);
+    color: #fff;
+  }
+  
+  th {
+    text-align: left;
+    padding: 1.5vw;
+  }
+  
+  /* Style the table rows */
+  tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  tbody tr:hover {
+    background-color: #ddd;
+  }
+  
+  td {
+    padding: 1.5vw;
+  }
+  
+  /* Style the table footer */
+  tfoot {
+    background-color: rgb(118, 118, 173);
+    color: #fff;
+
+  }
+  
+  tfoot td {
+    text-align: center;
+  }
+
+  .deletebtn:hover {
+    cursor: pointer;
+  }
+
+ 

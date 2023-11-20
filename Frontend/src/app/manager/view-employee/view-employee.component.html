@@ -1,0 +1,32 @@
+<mat-sidenav-container style="height: 100vh;">
+
+    <mat-sidenav mode="side" opened style="background-color: rgb(163, 163, 206); color: white;">
+        
+        <mat-nav-list style="padding: 20px;">
+
+            <a mat-list-item routerLink="/manager-dashboard" style="font-size: 28px; font-weight: bold; color: white; margin: 30px 0;">Dashboard</a>
+
+            <span style="display: block; margin: 20px 0; border-bottom: 1px solid white;"></span>
+            
+            <a routerLink="/budget" mat-list-item style="font-size: 24px; color: white; margin: 20px 0;">Set Budget</a>
+            
+            <a mat-list-item routerLink="/view-employee" style="font-size: 24px; color: white; margin: 20px 0;">View Employee</a>
+
+        </mat-nav-list>
+
+    </mat-sidenav>
+
+    <mat-sidenav-content style="padding: 20px;">
+        <form style="display: flex; flex-direction: column; align-items: center; margin-top: 9vw;">
+
+            <label for="employeeId" style="margin-bottom: 10px;">Enter Employee ID:</label>
+            <input type="text" id="employeeId" name="employeeId" style="width: 30%; padding: 10px; border: none; border-radius: 5px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); margin-bottom: 20px; background-color: rgb(199, 199, 211);">
+          
+            <button type="submit" (click)="saveEmployeeId()" style="padding: 12px 36px; background-color: rgb(118, 118, 173); border: none; border-radius: 25px; color: white; font-weight: bold; font-size: 16px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); cursor: pointer;">View Details</button>
+          
+          </form>
+          
+        
+    </mat-sidenav-content>
+
+</mat-sidenav-container>

@@ -1,0 +1,58 @@
+<mat-sidenav-container style="height: 100vh;">
+
+    <mat-sidenav mode="side" opened style="background-color: rgb(163, 163, 206); color: white;">
+        
+        <mat-nav-list style="padding: 20px;">
+
+            <a mat-list-item routerLink="/dashboard" style="font-size: 28px; font-weight: bold; color: white; margin: 30px 0;">Dashboard</a>
+
+            <span style="display: block; margin: 20px 0; border-bottom: 1px solid white;"></span>
+            
+            <a mat-list-item routerLink="/add-expense" style="font-size: 24px; color: white; margin: 20px 0;">Add Expense</a>
+            
+            <a mat-list-item routerLink="/rejected" style="font-size: 24px; color: white; margin: 20px 0;">Rejected Expenses</a>
+
+            <a mat-list-item routerLink="/profile" style="font-size: 24px; color: white; margin: 20px 0;">View Profile</a>
+        </mat-nav-list>
+
+    </mat-sidenav>
+
+    <mat-sidenav-content style="padding: 20px;">
+
+        <form (submit)="addExpense()" style="display: flex; flex-direction: column; align-items: center; margin-top: 7vw;">
+            <div style="margin-bottom: 20px;">
+               <label style="font-weight: bold; margin-bottom: 5px; display: block;" for="date">Date:</label>
+               <input style="padding: 12px 20px; border: none; border-radius: 5px; font-size: 16px; width: 100%; background-color: rgb(199, 199, 211); margin-bottom: 10px;" 
+                      type="text" 
+                      id="date" 
+                      name="date" 
+                      [(ngModel)]="date" 
+                      required>
+            </div>
+            <div style="margin-bottom: 20px;">
+               <label style="font-weight: bold; margin-bottom: 5px; display: block;" for="category">Category:</label>
+               <input style="padding: 12px 20px; border: none; border-radius: 5px; font-size: 16px; width: 100%; background-color: rgb(199, 199, 211); margin-bottom: 10px;" 
+                      type="text" 
+                      id="category" 
+                      name="category" 
+                      [(ngModel)]="category" 
+                      required>
+            </div> 
+            <div style="margin-bottom: 20px;">   
+               <label style="font-weight: bold; margin-bottom: 5px; display: block;" for="amount">Amount:</label>
+               <input style="padding: 12px 20px; border: none; border-radius: 5px; font-size: 16px; width: 100%; background-color: rgb(199, 199, 211); margin-bottom: 10px;" 
+                      type="number" 
+                      id="amount" 
+                      name="amount" 
+                      [(ngModel)]="amount" 
+                      required>
+            </div>   
+            <button style="padding: 12px 36px; background-color: rgb(118, 118, 173); border: none; border-radius: 25px; color: white; font-weight: bold; font-size: 16px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); margin-left: 2vw"   
+                    type="submit">
+               Add Expense
+            </button>
+        </form>
+
+    </mat-sidenav-content>
+
+</mat-sidenav-container>

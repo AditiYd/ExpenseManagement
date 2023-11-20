@@ -1,0 +1,48 @@
+<mat-sidenav-container style="height: 100vh;">
+
+    <mat-sidenav mode="side" opened style="background-color: rgb(163, 163, 206); color: white;">
+        
+        <mat-nav-list style="padding: 20px;">
+  
+            <a mat-list-item routerLink="/dashboard" style="font-size: 28px; font-weight: bold; color: white; margin: 30px 0;">Dashboard</a>
+  
+            <span style="display: block; margin: 20px 0; border-bottom: 1px solid white;"></span>
+            
+            <a mat-list-item routerLink="/add-expense" style="font-size: 24px; color: white; margin: 20px 0;">Add Expense</a>
+            
+            <a mat-list-item routerLink="/rejected" style="font-size: 24px; color: white; margin: 20px 0;">Rejected Expenses</a>
+            
+            <a mat-list-item routerLink="/profile" style="font-size: 24px; color: white; margin: 20px 0;">View Profile</a>
+        </mat-nav-list>
+  
+    </mat-sidenav>
+  
+    <mat-sidenav-content style="padding: 20px;">
+  
+      <h1>Rejected Expenses</h1>
+      <table>
+        <thead>
+          <tr>
+            <td>DATE</td>
+            <td>CATEGORY</td>
+            <td>AMOUNT</td>
+            <td>STATUS</td>
+            <td>FEEDBACK</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let expense of expenseData">
+            <td>{{expense.date | date:'dd/MM/yyyy'}}</td>
+            <td>{{expense.category}}</td>
+            <td>{{expense.amount | currency:'USD':'symbol':'1.2-2'}}</td>
+            <td>{{expense.status}}</td>
+            <td>{{expense.feedback}}</td>
+          </tr>
+        </tbody>
+      </table>
+      <table>
+      </table>
+  
+    </mat-sidenav-content>
+  
+  </mat-sidenav-container>

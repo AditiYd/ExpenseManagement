@@ -1,0 +1,41 @@
+<mat-sidenav-container style="height: 100vh;">
+
+    <mat-sidenav mode="side" opened style="background-color: rgb(163, 163, 206); color: white;">
+        
+        <mat-nav-list style="padding: 20px;">
+  
+            <a mat-list-item routerLink="/dashboard" style="font-size: 28px; font-weight: bold; color: white; margin: 30px 0;">Dashboard</a>
+  
+            <span style="display: block; margin: 20px 0; border-bottom: 1px solid white;"></span>
+            
+            <a mat-list-item routerLink="/add-expense" style="font-size: 24px; color: white; margin: 20px 0;">Add Expense</a>
+            
+            <a mat-list-item routerLink="/rejected" style="font-size: 24px; color: white; margin: 20px 0;">Rejected Expenses</a>
+  
+            <a mat-list-item routerLink="/profile" style="font-size: 24px; color: white; margin: 20px 0;">View Profile</a>
+        </mat-nav-list>
+  
+    </mat-sidenav>
+  
+    <mat-sidenav-content style="padding: 20px;">
+  
+     <button 
+        style="padding: 12px 36px; background-color: rgb(118, 118, 173); border: none; border-radius: 25px; color: white; 
+        font-weight: bold; margin-left:33vw; font-size: 16px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); cursor: pointer; margin-top: 20px;"   
+        (click)="viewReceipt()">
+          View Receipt
+      </button>
+      <div 
+        style="margin-top: 20px; display: flex; justify-content: center;" 
+        *ngIf="showImage">
+          <img 
+            [src]="'data:image/jpeg;base64,' + fileData" 
+            alt="Receipt Image" 
+            style="max-width: 100%; max-height: 500px; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);">
+      </div>
+  
+    </mat-sidenav-content>
+  
+  </mat-sidenav-container>
+  
+  
